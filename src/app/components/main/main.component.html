@@ -1,0 +1,18 @@
+<Page>
+<ActionBar title="Main" class="action-bar">
+</ActionBar>
+
+<FlexboxLayout flexDirection="column" sdkExampleTitle sdkToggleNavButton>
+	    <Label text="Fecha De Busqueda:" class="lbFecha"></Label>
+        <DatePicker class="no-margin"  (loaded)="onPickerLoaded($event)" (dateChange)="onDateChanged($event)" verticalAlignment="center"></DatePicker>
+		
+		<Label text="Guia:" class="lbFecha"></Label>
+        <ListPicker [items]="guides" textField="nombre" valueField="idOpeGuide" selectedIndex="0" (selectedIndexChange)="saveGuide($event)" class="p-15"></ListPicker>
+		
+		<Label text="Servicio:" class="lbFecha"></Label>
+        <ListPicker [items]="services" textField="descripcion" valueField="idOpeServicio" selectedIndex="0" (selectedIndexChange)="saveService($event)" class="p-15"></ListPicker>
+
+		<Button class="btn btn-primary btn-active" id="button" text="Buscar Pasajero" (tap)="buscarPasajero($event)"></Button>
+
+</FlexboxLayout>
+</Page>

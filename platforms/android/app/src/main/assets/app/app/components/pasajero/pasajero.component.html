@@ -1,0 +1,11 @@
+<ActionBar title="Pasajero" class="action-bar">
+</ActionBar>
+
+<ListView [items]="pasajeros" (itemTap)="onItemTap($event)" class="list-group">
+    <ng-template let-pasajero="item" let-i="index" let-odd="odd" let-even="even">
+        <StackLayout orientation="horizontal" class="list-group-item">
+            <Label text="Pasajero: " textWrap="true"></Label>
+            <Label [text]="pasajero.pasajero"></Label>
+        </StackLayout>
+    </ng-template>
+</ListView>

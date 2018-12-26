@@ -1,0 +1,10 @@
+<ActionBar title="Login" class="action-bar">
+</ActionBar>
+
+<StackLayout class="page" orientation="vertical">
+	<!--Image class="imgLogin" src="~/dist/img_test/1920x570.jpg"></Image-->
+	<Image class="imgLogin" src="http://adschile.santiagolab.cl/img/zonas/centro/destinos/valparaiso_y_vina_del_mar/cadenas_hoteleras/turistour/turistour_vina_del_mar_y_valparaiso/logo_turistour.jpg"></Image>
+    <TextField class="inputLogin" hint="Email" [(ngModel)]="credential.email"></TextField>
+    <TextField class="inputLogin" hint="Password" [(ngModel)]="credential.password"></TextField>
+    <Button class="btnLogin" text="Login" (tap)="login()"></Button>
+</StackLayout>
